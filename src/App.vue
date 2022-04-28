@@ -12,8 +12,16 @@
       <v-btn icon>
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
-           <v-btn icon>
+      <v-btn icon>
         <v-icon>dark_mode</v-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-icon>settings</v-icon>
+      </v-btn>
+      <v-btn icon>
+        <v-badge color="red" content="4" overlap>
+          <v-icon>notifications</v-icon>
+        </v-badge>
       </v-btn>
     </v-app-bar>
 
@@ -28,6 +36,7 @@ export default {
   name: "App",
 
   data: () => ({
+    notifictions: 0,
     //
   }),
 };
