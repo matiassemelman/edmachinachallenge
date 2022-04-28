@@ -1,15 +1,17 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-    <v-icon>mdi-menu</v-icon>
-      
-      <v-spacer></v-spacer>
+    <v-app-bar app color="primary" dark>
+      <v-btn icon>
+        <v-icon size="21">mdi-menu</v-icon>
+      </v-btn>
+      <div>
+        <v-img contain src="./assets/logo.png" width="146"></v-img>
+      </div>
 
-      
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
     </v-app-bar>
 
     <v-main>
@@ -19,9 +21,8 @@
 </template>
 
 <script>
-
 export default {
-  name: 'App',
+  name: "App",
 
   data: () => ({
     //
