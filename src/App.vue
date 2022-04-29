@@ -23,10 +23,15 @@
           <v-icon>notifications</v-icon>
         </v-badge>
       </v-btn>
-      <div>
-        <p class="mb-0">Jane Doe</p>
+      <div class="ml-2">
+        <p class="mb-0">John Doe</p>
         <p class="mb-0">Admin</p>
       </div>
+      <v-btn icon class="mx-2" v-on:click="avatarActions">
+        <v-avatar>
+          <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
+        </v-avatar>
+      </v-btn>
     </v-app-bar>
 
     <v-main>
@@ -40,9 +45,17 @@ import "./css/app.css";
 export default {
   name: "App",
 
-  data: () => ({
-    notifictions: 0,
-    //
-  }),
+  data: function() {
+return {   notifictions: 0};
+},
+
+
+
+    methods: {
+      avatarActions  () {
+        console.log("hello")
+      }
+    },
+  
 };
 </script>
