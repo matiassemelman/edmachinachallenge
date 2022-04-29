@@ -27,11 +27,55 @@
         <p class="mb-0">John Doe</p>
         <p class="mb-0">Admin</p>
       </div>
-      <v-btn icon class="mx-2" v-on:click="avatarActions">
-        <v-avatar>
-          <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
-        </v-avatar>
-      </v-btn>
+      <v-menu offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            class="mx-2"
+            v-on:click="avatarActions"
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-avatar>
+              <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
+            </v-avatar>
+          </v-btn>
+        </template>
+        <v-list width="208">
+          <v-list-item>
+            <v-icon class="mr-2">person</v-icon>
+            <v-list-item-title>Profile</v-list-item-title>
+          </v-list-item>
+          <v-divider></v-divider>
+          <v-list-item>
+            <v-list-item-title>
+              <div class="d-flex">
+                <div>
+                  <p class="primary--text font-weight-bold mt-3 mb-1">Teclab</p>
+                  <p class="mt-1">12829347</p>
+                </div>
+
+                <div>
+                  <v-btn icon class="mt-3 ml-16">
+                    <v-icon>navigate_next</v-icon>
+                  </v-btn>
+                </div>
+              </div>
+            </v-list-item-title>
+          </v-list-item>
+          <v-divider></v-divider>
+           <v-list-item>
+            <v-icon class="mr-2">mail</v-icon>
+            <v-list-item-title>Inbox</v-list-item-title>
+          </v-list-item>
+           <v-list-item>
+            <v-icon class="mr-2">notifications</v-icon>
+            <v-list-item-title>Notifications</v-list-item-title>
+          </v-list-item>
+          <v-divider></v-divider>
+          
+        </v-list>
+      </v-menu>
     </v-app-bar>
 
     <v-main>
@@ -45,17 +89,14 @@ import "./css/app.css";
 export default {
   name: "App",
 
-  data: function() {
-return {   notifictions: 0};
-},
+  data: function () {
+    return { notifictions: 0 };
+  },
 
-
-
-    methods: {
-      avatarActions  () {
-        console.log("hello")
-      }
+  methods: {
+    avatarActions() {
+      console.log("hello");
     },
-  
+  },
 };
 </script>
