@@ -23,6 +23,10 @@
           <v-icon>notifications</v-icon>
         </v-badge>
       </v-btn>
+      <div>
+        <p class="mb-0">Jane Doe</p>
+        <p class="mb-0">Admin</p>
+      </div>
     </v-app-bar>
 
     <v-main>
@@ -32,6 +36,7 @@
 </template>
 
 <script>
+import "./css/app.css";
 export default {
   name: "App",
 
