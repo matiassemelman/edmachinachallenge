@@ -39,6 +39,14 @@
             <v-avatar>
               <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
             </v-avatar>
+            <v-badge
+            color="green"
+   bottom
+bordered
+dot
+        offset-x="15"
+        offset-y="-10"
+></v-badge>
           </v-btn>
         </template>
         <v-list width="208">
@@ -73,7 +81,18 @@
             <v-list-item-title>Notifications</v-list-item-title>
           </v-list-item>
           <v-divider></v-divider>
-          
+                     <v-list-item>
+            <v-icon class="mr-2">settings</v-icon>
+            <v-list-item-title>Account Settings</v-list-item-title>
+          </v-list-item>
+                     <v-list-item>
+            <v-icon class="mr-2">receipt</v-icon>
+            <v-list-item-title>Billing</v-list-item-title>
+          </v-list-item>
+                     <v-list-item>
+            <v-icon class="mr-2">logout</v-icon>
+            <v-list-item-title>Logout</v-list-item-title>
+          </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>
