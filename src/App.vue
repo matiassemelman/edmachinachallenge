@@ -100,11 +100,11 @@ dot
 
     <v-main>
        <v-navigation-drawer permanent >
-    <v-list>
+    <v-list class="mx-4 mt-4 mb-2">
       <v-list-tile>
         <v-list-tile-content>
-          <v-icon>home</v-icon>
-          <v-list-tile-title>Dashboard</v-list-tile-title>
+          <v-icon class="mx-2">home</v-icon>
+          <v-list-tile-title >Dashboard</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
     </v-list>
