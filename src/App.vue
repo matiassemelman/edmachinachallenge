@@ -40,13 +40,13 @@
               <img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John" />
             </v-avatar>
             <v-badge
-            color="green"
-   bottom
-bordered
-dot
-        offset-x="15"
-        offset-y="-10"
-></v-badge>
+              color="green"
+              bottom
+              bordered
+              dot
+              offset-x="15"
+              offset-y="-10"
+            ></v-badge>
           </v-btn>
         </template>
         <v-list width="208">
@@ -72,43 +72,42 @@ dot
             </v-list-item-title>
           </v-list-item>
           <v-divider></v-divider>
-           <v-list-item>
+          <v-list-item>
             <v-icon class="mr-2">mail</v-icon>
             <v-list-item-title>Inbox</v-list-item-title>
           </v-list-item>
-           <v-list-item>
+          <v-list-item>
             <v-icon class="mr-2">notifications</v-icon>
             <v-list-item-title>Notifications</v-list-item-title>
           </v-list-item>
           <v-divider></v-divider>
-                     <v-list-item>
+          <v-list-item>
             <v-icon class="mr-2">settings</v-icon>
             <v-list-item-title>Account Settings</v-list-item-title>
           </v-list-item>
-                     <v-list-item>
+          <v-list-item>
             <v-icon class="mr-2">receipt</v-icon>
             <v-list-item-title>Billing</v-list-item-title>
           </v-list-item>
-                     <v-list-item>
+          <v-list-item>
             <v-icon class="mr-2">logout</v-icon>
             <v-list-item-title>Logout</v-list-item-title>
           </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>
-    
 
     <v-main>
-       <v-navigation-drawer permanent >
-    <v-list class="mx-4 mt-4 mb-2">
-      <v-list-tile>
-        <v-list-tile-content>
-          <v-icon class="mx-2">home</v-icon>
-          <v-list-tile-title >Dashboard</v-list-tile-title>
-        </v-list-tile-content>
-      </v-list-tile>
-    </v-list>
-    </v-navigation-drawer>
+      <v-navigation-drawer permanent>
+        <v-list class="mx-4 mt-4 mb-2">
+          <v-list-tile>
+            <v-list-tile-content>
+              <v-icon class="mx-2">home</v-icon>
+              <v-list-tile-title>Dashboard</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-navigation-drawer>
       <router-view></router-view>
     </v-main>
   </v-app>
@@ -120,26 +119,55 @@ export default {
   name: "App",
 
   data: function () {
-    return { notifictions: 0,
-    pages: [{
-      icon: 'person',
-      title: 'aPage'
-    },
-    {
-      icon: 'person',
-      title: 'aPage'
-    },
-    {
-      icon: 'person',
-      title: 'aPage'
-    },
-    ] };
-  },
+    return {
+      notifictions: 0,
+      links: [
+        {
+          icon: "home",
+          text: "Dashboard",
+          route: "/"},{
+               icon: "calendar_today",
+          text: "Calendar",
+          route: "/calendar",
+          }, {
+  icon: "add_box",
+          text: "Machina Hi",
+          route: "/machinahi"
+          },
+          {
+ icon: "outbound",
+          text: "Heads Up",
+          route: "/headsup",
+          },
+          {
+ icon: "sync",
+          text: "Stay Around",
+          route: "/stayaround",
+          },
+          {
+ icon: "analytics",
+          text: "Analytics",
+          route: "/analytics",
+          },
+{
+    icon: "leaderboard",
+          text: "My Reports",
+          route: "/reports",
+}
+        
+         
+         
+         
+        
+        
+      ],
 
-  methods: {
-    avatarActions() {
-      console.log("hello");
-    },
+      methods: {
+        avatarActions() {
+          console.log("hello");
+        },
+      },
+    };
   },
 };
 </script>
