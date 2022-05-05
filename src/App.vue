@@ -98,14 +98,17 @@
     </v-app-bar>
 
     <v-main>
-      <v-navigation-drawer permanent>
-        <v-list class="mx-4 mt-4 mb-2">
-          <v-list-tile>
-            <v-list-tile-content>
-              <v-icon class="mx-2">home</v-icon>
-              <v-list-tile-title>Dashboard</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
+      <v-navigation-drawer permanent width="260" >
+        <v-list class="mt-4">
+         
+          <v-list-item v-for='link in links' :key='link.text'  >
+            <v-btn width='230' >
+              <v-icon class="mx-2" >{{link.icon}}</v-icon>
+              <v-list-item-title >{{link.text}}</v-list-item-title>
+          </v-btn>
+            
+           
+          </v-list-item>
         </v-list>
       </v-navigation-drawer>
       <router-view></router-view>
