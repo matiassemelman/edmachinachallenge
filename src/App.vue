@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app color="primary" dark flat>
       <v-btn icon>
         <v-icon size="21">mdi-menu</v-icon>
       </v-btn>
@@ -96,8 +96,19 @@ dot
         </v-list>
       </v-menu>
     </v-app-bar>
+    
 
     <v-main>
+       <v-navigation-drawer permanent >
+    <v-list>
+      <v-list-tile>
+        <v-list-tile-content>
+          <v-icon>home</v-icon>
+          <v-list-tile-title>Dashboard</v-list-tile-title>
+        </v-list-tile-content>
+      </v-list-tile>
+    </v-list>
+    </v-navigation-drawer>
       <router-view></router-view>
     </v-main>
   </v-app>
@@ -109,7 +120,20 @@ export default {
   name: "App",
 
   data: function () {
-    return { notifictions: 0 };
+    return { notifictions: 0,
+    pages: [{
+      icon: 'person',
+      title: 'aPage'
+    },
+    {
+      icon: 'person',
+      title: 'aPage'
+    },
+    {
+      icon: 'person',
+      title: 'aPage'
+    },
+    ] };
   },
 
   methods: {
