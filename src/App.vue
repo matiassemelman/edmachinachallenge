@@ -98,16 +98,20 @@
     </v-app-bar>
 
     <v-main>
-      <v-navigation-drawer permanent width="260" >
+      <v-navigation-drawer permanent width="260">
         <v-list class="mt-4">
-         
-          <v-list-item v-for='link in links' :key='link.text'  >
-            <v-btn width='230' >
-              <v-icon class="mx-2" >{{link.icon}}</v-icon>
-              <v-list-item-title >{{link.text}}</v-list-item-title>
-          </v-btn>
-            
-           
+          <v-list-item v-for="link in links" :key="link.text">
+            <v-btn width="230">
+              <v-icon class="mx-2">{{ link.icon }}</v-icon>
+              <v-list-item-title>{{ link.text }}</v-list-item-title>
+            </v-btn>
+          </v-list-item>
+            <v-list-item>
+            <v-card width="230">
+              
+              <v-list-item-title>Reports</v-list-item-title>
+              <v-icon class="mx-2" right>home</v-icon>
+            </v-card>
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
@@ -128,41 +132,40 @@ export default {
         {
           icon: "home",
           text: "Dashboard",
-          route: "/"},{
-               icon: "calendar_today",
+          route: "/",
+        },
+        {
+          icon: "calendar_today",
           text: "Calendar",
           route: "/calendar",
-          }, {
-  icon: "add_box",
+        },
+      ],
+      reports: [
+        {
+          icon: "add_box",
           text: "Machina Hi",
-          route: "/machinahi"
-          },
-          {
- icon: "outbound",
+          route: "/machinahi",
+        },
+        {
+          icon: "outbound",
           text: "Heads Up",
           route: "/headsup",
-          },
-          {
- icon: "sync",
+        },
+        {
+          icon: "sync",
           text: "Stay Around",
           route: "/stayaround",
-          },
-          {
- icon: "analytics",
+        },
+        {
+          icon: "analytics",
           text: "Analytics",
           route: "/analytics",
-          },
-{
-    icon: "leaderboard",
+        },
+        {
+          icon: "leaderboard",
           text: "My Reports",
           route: "/reports",
-}
-        
-         
-         
-         
-        
-        
+        },
       ],
 
       methods: {
