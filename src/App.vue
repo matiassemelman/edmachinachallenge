@@ -110,7 +110,7 @@
             <v-card flat class="d-flex align-end font-weight-bold" width="230">
              <!-- ================= HOW TO ACHIEVE THE LIGHTER COLOR???? -->
               <v-list-item-subtitle class='text--lighten-3'>REPORTS</v-list-item-subtitle>
-              <v-icon class="mx-2" right>home</v-icon>
+              <v-icon class="mx-2" small right>list_alt</v-icon>
             </v-card>
           </v-list-item>
         </v-list>
