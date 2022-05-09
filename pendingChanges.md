@@ -1,3 +1,5 @@
 # Pending Changes
 
-- Navigation buttons -> Slight border
+- Navigation bar:
+ - Button slight border
+ - Check box margins/paddings
