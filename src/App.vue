@@ -107,7 +107,7 @@
             </v-btn>
           </v-list-item>
             <v-list-item>
-            <v-card width="230">
+            <v-card flat width="230">
               
               <v-list-item-title>Reports</v-list-item-title>
               <v-icon class="mx-2" right>home</v-icon>
