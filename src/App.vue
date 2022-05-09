@@ -113,6 +113,12 @@
               <v-icon class="mx-2" small right>list_alt</v-icon>
             </v-card>
           </v-list-item>
+                   <v-list-item v-for="report in reports" :key="report.text">
+            <v-btn width="230">
+              <v-icon class="mx-2">{{ report.icon }}</v-icon>
+              <v-list-item-title>{{ report.text }}</v-list-item-title>
+            </v-btn>
+          </v-list-item>
         </v-list>
       </v-navigation-drawer>
       <router-view></router-view>
