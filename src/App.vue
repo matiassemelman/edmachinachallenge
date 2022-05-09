@@ -107,9 +107,9 @@
             </v-btn>
           </v-list-item>
             <v-list-item>
-            <v-card flat class="d-flex" width="230">
-              
-              <v-list-item-title>Reports</v-list-item-title>
+            <v-card flat class="d-flex align-end font-weight-bold" width="230">
+             <!-- ================= HOW TO ACHIEVE THE LIGHTER COLOR???? -->
+              <v-list-item-subtitle class='text--lighten-3'>REPORTS</v-list-item-subtitle>
               <v-icon class="mx-2" right>home</v-icon>
             </v-card>
           </v-list-item>
