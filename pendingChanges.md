@@ -1,3 +1,4 @@
 # Pending Changes
 
-- Color lighter in 'Reports' subtitle. (App.vue 1:112)
+- Navigation buttons -> Slight border
+- Reports Subtitle -> Color lighter (App.vue 1:112)
