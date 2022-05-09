@@ -101,7 +101,7 @@
       <v-navigation-drawer permanent width="260">
         <v-list class="mt-4">
           <v-list-item v-for="link in links" :key="link.text">
-            <v-btn width="230">
+            <v-btn width="230" depressed color="white">
               <v-icon class="mx-2">{{ link.icon }}</v-icon>
               <v-list-item-title>{{ link.text }}</v-list-item-title>
             </v-btn>
@@ -114,7 +114,7 @@
             </v-card>
           </v-list-item>
                    <v-list-item v-for="report in reports" :key="report.text">
-            <v-btn width="230">
+            <v-btn width="230" depressed color="white">
               <v-icon class="mx-2">{{ report.icon }}</v-icon>
               <v-list-item-title>{{ report.text }}</v-list-item-title>
             </v-btn>
