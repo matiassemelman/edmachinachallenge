@@ -109,7 +109,7 @@
             <v-list-item>
             <v-card flat class="d-flex align-end font-weight-bold" width="230">
              <!-- ================= HOW TO ACHIEVE THE LIGHTER COLOR???? -->
-              <v-list-item-subtitle class='text--lighten-3'>REPORTS</v-list-item-subtitle>
+              <v-list-item-subtitle class="grey--text text--lighten-1">REPORTS</v-list-item-subtitle>
               <v-icon class="mx-2" small right>list_alt</v-icon>
             </v-card>
           </v-list-item>
@@ -118,6 +118,13 @@
               <v-icon class="mx-2">{{ report.icon }}</v-icon>
               <v-list-item-title>{{ report.text }}</v-list-item-title>
             </v-btn>
+          </v-list-item>
+            <v-list-item>
+            <v-card flat class="d-flex align-end font-weight-bold" width="230">
+             <!-- ================= HOW TO ACHIEVE THE LIGHTER COLOR???? -->
+              <v-list-item-subtitle class="grey--text text--lighten-1">SETTINGS</v-list-item-subtitle>
+      
+            </v-card>
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
