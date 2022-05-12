@@ -2,14 +2,19 @@
   <v-navigation-drawer permanent width="260">
     <v-list class="mt-4">
       <v-list-item v-for="link in links" :key="link.text">
-        <v-btn width="230" depressed color="white" class="text-left text-capitalize">
-          <v-icon color="#6E6B7B" class="mr-2 ">{{ link.icon }}</v-icon>
-          <v-list-item-title >{{ link.text }}</v-list-item-title>
+        <v-btn
+          width="230"
+          depressed
+          color="white"
+          class="text-left text-capitalize"
+        >
+          <v-icon color="#6E6B7B" class="mr-2">{{ link.icon }}</v-icon>
+          <v-list-item-title>{{ link.text }}</v-list-item-title>
         </v-btn>
       </v-list-item>
       <v-list-item>
         <v-card flat class="d-flex align-end font-weight-bold" width="230">
-          <!-- ================= HOW TO ACHIEVE THE LIGHTER COLOR???? -->
+          
           <v-list-item-subtitle class="grey--text text--lighten-1"
             >REPORTS</v-list-item-subtitle
           >
@@ -17,28 +22,45 @@
         </v-card>
       </v-list-item>
       <v-list-item v-for="report in reports" :key="report.text" width="230">
-        <v-btn v-if="report.submenu.length > 0" width="230" class="text-left text-capitalize" depressed color="#4436FD">
+        <v-btn
+          v-if="report.submenu.length > 0"
+          width="230"
+          class="text-left text-capitalize"
+          depressed
+          color="#4436FD"
+        >
           <v-icon color="white" class="mr-2">{{ report.icon }}</v-icon>
           <v-list-item-title class="white--text"
             >{{ report.text }}
             <v-icon right>list_alt</v-icon>
           </v-list-item-title>
         </v-btn>
-        <v-btn v-else width="230" depressed color="white" class="text-left text-capitalize">
+        <v-btn
+          v-else
+          width="230"
+          depressed
+          color="white"
+          class="text-left text-capitalize"
+        >
           <v-icon color="#6E6B7B" class="mr-2">{{ report.icon }}</v-icon>
           <v-list-item-title>{{ report.text }}</v-list-item-title>
         </v-btn>
       </v-list-item>
       <v-list-item>
         <v-card flat class="d-flex align-end font-weight-bold" width="230">
-          <!-- ================= HOW TO ACHIEVE THE LIGHTER COLOR???? -->
+      
           <v-list-item-subtitle class="grey--text text--lighten-1"
             >SETTINGS</v-list-item-subtitle
           >
         </v-card>
       </v-list-item>
       <v-list-item v-for="setting in settings" :key="setting.text">
-        <v-btn width="230" depressed color="white" class="text-left text-capitalize">
+        <v-btn
+          width="230"
+          depressed
+          color="white"
+          class="text-left text-capitalize"
+        >
           <v-icon color="#6E6B7B" class="mr-2">{{ setting.icon }}</v-icon>
           <v-list-item-title>{{ setting.text }}</v-list-item-title>
         </v-btn>
@@ -119,11 +141,6 @@ export default {
         route: "/help",
       },
     ],
-    methods: {
-      avatarActions() {
-        console.log("hello");
-      },
-    },
   }),
 };
 </script>
