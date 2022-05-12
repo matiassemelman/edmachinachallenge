@@ -1,70 +1,25 @@
 <template>
-  <v-navigation-drawer permanent width="260">
-    <v-list class="mt-4">
-      <v-list-item v-for="link in links" :key="link.text">
-        <v-btn
-          width="230"
-          depressed
-          color="white"
-          class="text-left text-capitalize"
-        >
-          <v-icon color="#6E6B7B" class="mr-2">{{ link.icon }}</v-icon>
-          <v-list-item-title>{{ link.text }}</v-list-item-title>
-        </v-btn>
-      </v-list-item>
-      <v-list-item>
-        <v-card flat class="d-flex align-end font-weight-bold" width="230">
-          
-          <v-list-item-subtitle class="grey--text text--lighten-1"
-            >REPORTS</v-list-item-subtitle
-          >
-          <v-icon class="mx-2" small right>list_alt</v-icon>
-        </v-card>
-      </v-list-item>
-      <v-list-item v-for="report in reports" :key="report.text" width="230">
-        <v-btn
-          v-if="report.submenu.length > 0"
-          width="230"
-          class="text-left text-capitalize"
-          depressed
-          color="#4436FD"
-        >
-          <v-icon color="white" class="mr-2">{{ report.icon }}</v-icon>
-          <v-list-item-title class="white--text"
-            >{{ report.text }}
-            <v-icon right>list_alt</v-icon>
-          </v-list-item-title>
-        </v-btn>
-        <v-btn
-          v-else
-          width="230"
-          depressed
-          color="white"
-          class="text-left text-capitalize"
-        >
-          <v-icon color="#6E6B7B" class="mr-2">{{ report.icon }}</v-icon>
-          <v-list-item-title>{{ report.text }}</v-list-item-title>
-        </v-btn>
-      </v-list-item>
-      <v-list-item>
-        <v-card flat class="d-flex align-end font-weight-bold" width="230">
-      
-          <v-list-item-subtitle class="grey--text text--lighten-1"
-            >SETTINGS</v-list-item-subtitle
-          >
-        </v-card>
-      </v-list-item>
-      <v-list-item v-for="setting in settings" :key="setting.text">
-        <v-btn
-          width="230"
-          depressed
-          color="white"
-          class="text-left text-capitalize"
-        >
-          <v-icon color="#6E6B7B" class="mr-2">{{ setting.icon }}</v-icon>
-          <v-list-item-title>{{ setting.text }}</v-list-item-title>
-        </v-btn>
-      </v-list-item>
+  <v-navigation-drawer permanent width="20%">
+    <v-list>
+      <v-list-group
+        v-for="item in items"
+        :key="item.title"
+        v-model="item.active"
+        :prepend-icon="item.action"
+        no-action
+      >
+        <template v-slot:activator>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title"></v-list-item-title>
+          </v-list-item-content>
+        </template>
+
+        <v-list-item v-for="child in item.items" :key="child.title">
+          <v-list-item-content>
+            <v-list-item-title v-text="child.title"></v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list-group>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -74,70 +29,73 @@ export default {
   name: "NavBar",
 
   data: () => ({
-    notifictions: 0,
-    links: [
+    items: [
       {
-        icon: "home",
-        text: "Dashboard",
+        action: "home",
+        items: [],
         route: "/",
+        title: "Dashboard",
       },
       {
-        icon: "calendar_today",
-        text: "Calendar",
+        action: "calendar_today",
+        active: true,
+        items: [],
+        title: "Calendar",
         route: "/calendar",
       },
-    ],
-    reports: [
+
       {
-        icon: "add_box",
-        text: "Machina Hi",
+        action: "add_box",
+        title: "Machina Hi",
         route: "/machinahi",
-        submenu: [],
+        items: [],
       },
       {
-        icon: "outbound",
-        text: "Heads Up",
+        action: "outbound",
+        title: "Heads Up",
         route: "/headsup",
-        submenu: [],
+        items: [],
       },
       {
-        icon: "sync",
-        text: "Stay Around",
+        action: "sync",
+        title: "Stay Around",
         route: "/stayaround",
-        submenu: [],
+        items: [],
       },
       {
-        icon: "analytics",
-        text: "Analytics",
+        action: "analytics",
+        title: "Analytics",
         route: "/analytics",
-        submenu: [],
+        items: [],
       },
       {
-        icon: "leaderboard",
-        text: "My Reports",
+        action: "leaderboard",
+        title: "My Reports",
         route: "/reports",
-        submenu: [{}],
+        items: [{title: 'First Report'}],
       },
-    ],
-    settings: [
       {
-        icon: "person",
-        text: "Manage Users",
+        action: "person",
+        items: [],
+        title: "Manage Users",
         route: "/manage",
       },
       {
-        icon: "cloud_download",
-        text: "Cloud Connect",
+        action: "cloud_download",
+        title: "Cloud Connect",
+        items: [],
         route: "/cloudconnect",
       },
       {
-        icon: "api",
-        text: "Api Manager",
+        action: "api",
+        title: "Api Manager",
+        items: [],
         route: "/apimanager",
       },
       {
-        icon: "help",
-        text: "Help/Support",
+        action: "help",
+        title: "Help/Support",
+        items: [],
         route: "/help",
       },
     ],
