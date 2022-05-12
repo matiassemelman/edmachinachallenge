@@ -5,3 +5,8 @@ html,
 #app {
   font-family: "Montserrat", sans-serif;
 }
+
+.active {
+  background-color: primary;
+  
+}

@@ -101,6 +101,8 @@
 export default {
   name: "TopBar",
 
-  data: () => ({}),
+  data: () => ({
+    notifications: 4
+  }),
 };
 </script>
