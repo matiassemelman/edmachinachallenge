@@ -7,6 +7,7 @@
         v-model="item.active"
         :prepend-icon="item.action"
         no-action
+        append-icon=""
       >
         <template v-slot:activator>
           <v-list-item-content>
@@ -29,10 +30,11 @@ export default {
   name: "NavBar",
 
   data: () => ({
+    
     items: [
       {
         action: "home",
-        items: [],
+    
         route: "/",
         title: "Dashboard",
       },
@@ -72,7 +74,7 @@ export default {
         action: "leaderboard",
         title: "My Reports",
         route: "/reports",
-        items: [{title: 'First Report'}],
+        items: [{title: ' '}],
       },
       {
         action: "person",
@@ -99,6 +101,7 @@ export default {
         route: "/help",
       },
     ],
+
   }),
 };
 </script>
