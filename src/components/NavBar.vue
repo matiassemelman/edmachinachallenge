@@ -7,7 +7,7 @@
         v-model="item.active"
         :prepend-icon="item.action"
         no-action
-        append-icon=""
+        :append-icon='item.action !== "leaderboard" ? "" : "expand_more"'
       >
         <template v-slot:activator>
           <v-list-item-content>
@@ -30,6 +30,7 @@ export default {
   name: "NavBar",
 
   data: () => ({
+    
     
     items: [
       {
