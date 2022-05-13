@@ -8,14 +8,16 @@
         :prepend-icon="item.action"
         no-action
         :append-icon='item.action !== "leaderboard" ? "" : "expand_more"'
+      active-class="primary"
+      color="white"
       >
-        <template v-slot:activator>
-          <v-list-item-content>
+        <template v-slot:activator >
+          <v-list-item-content >
             <v-list-item-title v-text="item.title"></v-list-item-title>
           </v-list-item-content>
         </template>
 
-        <v-list-item v-for="child in item.items" :key="child.title">
+        <v-list-item v-for="child in item.items" :key="child.title" class="listItemHeight" >
           <v-list-item-content>
             <v-list-item-title v-text="child.title"></v-list-item-title>
           </v-list-item-content>
@@ -35,7 +37,7 @@ export default {
     items: [
       {
         action: "home",
-    
+    items: [],
         route: "/",
         title: "Dashboard",
       },
@@ -106,3 +108,11 @@ export default {
   }),
 };
 </script>
+
+<style scoped lang="scss">
+.listItemHeight {
+  height: 400px
+}
+
+
+</style>
