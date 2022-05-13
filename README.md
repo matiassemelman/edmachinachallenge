@@ -1,4 +1,4 @@
-# edmachinachallenge
+# [edMachinaChallenge on Netlify](https://github.com/matiassemelman/edmachinachallenge)
 
 ## Project setup
 ```
