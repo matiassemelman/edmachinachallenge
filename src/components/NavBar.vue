@@ -1,15 +1,17 @@
 <template>
   <v-navigation-drawer permanent width="20%">
     <v-list>
-      <v-list-group
+      <v-list-group 
         v-for="item in items"
         :key="item.title"
         v-model="item.active"
         :prepend-icon="item.action"
         no-action
-        :append-icon='item.action !== "leaderboard" ? "" : "expand_more"'
-      active-class="primary"
-      color="white"
+        :append-icon="item.action !== 'leaderboard' ? '' : 'expand_more'"
+        active-class="primary rounded-lg"
+        color="white"
+        class="mx-4 py-0"
+        
       >
         <template v-slot:activator >
           <v-list-item-content >
@@ -17,7 +19,11 @@
           </v-list-item-content>
         </template>
 
-        <v-list-item v-for="child in item.items" :key="child.title" class="listItemHeight" >
+        <v-list-item 
+          v-for="child in item.items"
+          :key="child.title"
+          class="listItemHeight"
+        >
           <v-list-item-content>
             <v-list-item-title v-text="child.title"></v-list-item-title>
           </v-list-item-content>
@@ -32,12 +38,10 @@ export default {
   name: "NavBar",
 
   data: () => ({
-    
-    
     items: [
       {
         action: "home",
-    items: [],
+        items: [],
         route: "/",
         title: "Dashboard",
       },
@@ -77,7 +81,7 @@ export default {
         action: "leaderboard",
         title: "My Reports",
         route: "/reports",
-        items: [{title: ' '}],
+        items: [{ title: " " }],
       },
       {
         action: "person",
@@ -104,15 +108,16 @@ export default {
         route: "/help",
       },
     ],
-
   }),
 };
 </script>
 
 <style scoped lang="scss">
 .listItemHeight {
-  height: 400px
+  height: 400px;
 }
 
-
+.border {
+  border-radius: 5%;
+}
 </style>
