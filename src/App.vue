@@ -1,9 +1,13 @@
 <template>
   <v-app>
     <TopBar />
+    
     <v-main>
-      <NavBar />
+      <v-container fluid class="d-flex">
+ <NavBar />
       <router-view></router-view>
+      </v-container>
+     
     </v-main>
   </v-app>
 </template>
