@@ -15,7 +15,7 @@
           <v-list-item-icon>
             <v-icon v-text="item.action"></v-icon>
           </v-list-item-icon>
-          <v-list-item-content>
+          <v-list-item-content link @click="$router.push({ path: item.route })">
             <v-list-item-title v-text="item.title"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -38,13 +38,15 @@
         active-class="primary rounded-lg"
         color="white"
         class="mx-4 py-0"
+       
       >
    
 
         <template v-slot:activator>
  
-          <v-list-item-content>
-            <v-list-item-title v-text="report.title"></v-list-item-title>
+          <v-list-item-content link @click="$router.push({ path: report.route }) ">
+
+            <v-list-item-tile v-text="report.title" ></v-list-item-tile>
           </v-list-item-content>
           
         </template>
@@ -79,7 +81,7 @@
 
         <template v-slot:activator>
  
-          <v-list-item-content>
+          <v-list-item-content link @click="$router.push({ path: setting.route })">
             <v-list-item-title v-text="setting.title"></v-list-item-title>
           </v-list-item-content>
           

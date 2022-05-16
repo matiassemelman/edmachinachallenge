@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="app">
     <TopBar />
     
     <v-main>
