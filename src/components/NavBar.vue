@@ -61,7 +61,7 @@
       </v-list-group>
     </v-list>
   
-       <v-subheader class="height: 1px" >SETTINGS</v-subheader>
+       <v-subheader  >SETTINGS</v-subheader>
 
      <v-list>
       
