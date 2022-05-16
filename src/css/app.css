@@ -5,3 +5,18 @@ html,
 #app {
   font-family: "Montserrat", sans-serif;
 }
+
+.active {
+  background-color: primary;
+  
+}
+
+.v-subheader {
+  height: 18px;
+  font-weight: 600;
+  
+}
+
+.theme--light.v-subheader {
+  color: #BABFC7
+}

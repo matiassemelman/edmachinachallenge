@@ -1,8 +1,9 @@
 <template>
-  <div><h1>Hello</h1></div>
+  <h1>I' a Home without Figma Design</h1>
 </template>
 
 <script>
+
 
 
   export default {
