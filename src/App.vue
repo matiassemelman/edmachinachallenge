@@ -27,3 +27,12 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+.container, .v-navigation-drawer {
+  background-color: #F8F8F8
+}
+
+
+
+</style>
