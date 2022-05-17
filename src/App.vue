@@ -3,7 +3,7 @@
     <TopBar />
     
     <v-main>
-      <v-container fluid class="d-flex">
+      <v-container fluid class="d-flex ml-0">
  <NavBar />
       <router-view></router-view>
       </v-container>

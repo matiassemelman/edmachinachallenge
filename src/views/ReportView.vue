@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid >
     <v-data-iterator
       :items="desserts"
       item-key="name"
@@ -10,7 +10,7 @@
         <v-toolbar class="mb-2 d-flex grey lighten-5" width="70vw" flat>
           <v-card
             class="d-flex grey lighten-5 justify-space-between align-center"
-            style="width: 237px; marginRight: 375px"
+            style="width: 237px; marginRight: 300px"
             elevation="0"
             
           >
@@ -18,15 +18,17 @@
               >My Report</v-toolbar-title
             >
             <v-btn icon>
-              <v-icon small >content_copy</v-icon>
+              <v-icon small class="v-btn-size">content_copy</v-icon>
             </v-btn>
             <v-btn icon>
-              <v-icon small>share</v-icon>
+              <v-icon small class="v-btn-size">share</v-icon>
             </v-btn>
           </v-card>
 
           <v-spacer></v-spacer>
-          <v-btn icon>
+          <v-card   class="d-flex grey lighten-5 justify-space-between align-center" 
+          elevation="0">
+<v-btn icon>
             <v-icon color="#AA3EFF">highlight_off</v-icon>
           </v-btn>
 
@@ -57,6 +59,8 @@
           <v-btn icon>
             <v-icon>app_registration</v-icon>
           </v-btn>
+          </v-card>
+          
         </v-toolbar>
       </template>
     </v-data-iterator>
@@ -64,7 +68,7 @@
 </template>
 
 <style scoped lang="scss">
-.v-btn--icon.v-size--default .v-icon, .v-icon.v-icon {
+.v-btn--icon.v-size--default .v-icon, .v-icon.v-icon, .v-btn-size {
   height: 21px;
 }
 

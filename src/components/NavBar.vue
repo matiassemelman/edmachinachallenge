@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer permanent width="20%">
+  <v-navigation-drawer permanent width="260" class="flex-shrink-0">
     <v-list rounded class="px-0">
       
       <v-list-item-group
