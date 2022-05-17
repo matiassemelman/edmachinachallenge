@@ -9,8 +9,8 @@
     >
     <template v-slot:header>
         <v-toolbar
-          class="mb-2"
-          
+          class="mb-2 d-flex grey lighten-5"
+          width="70vw"
           flat
         >
           <v-toolbar-title class="primary--text headline mr-8">My Report</v-toolbar-title>
