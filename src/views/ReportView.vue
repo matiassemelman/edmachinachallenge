@@ -25,3 +25,12 @@
     </v-data-iterator>
   </v-container>
 </template>
+
+
+<style scoped lang="scss">
+
+
+.theme--light.v-toolbar.v-sheet {
+  background-color: #F8F8F8
+}
+</style>
