@@ -1,18 +1,18 @@
 <template>
   <v-navigation-drawer permanent width="20%">
-    <v-list rounded>
+    <v-list rounded class="px-0">
       
       <v-list-item-group
         v-model="selectedItem"
         color="primary"
-        class="mx-2 py-0"
+        class="py-0"
 
       >
-        <v-list-item
+        <v-list-item 
           v-for="(item, i) in items"
           :key="i"
         >
-          <v-list-item-icon>
+          <v-list-item-icon class="mr-4">
             <v-icon v-text="item.action"></v-icon>
           </v-list-item-icon>
           <v-list-item-content link @click="$router.push({ path: item.route })">
@@ -33,17 +33,17 @@
         v-for="report in reports"
         :key="report.title"
         v-model="report.active"
-        :prepend-icon="report.action"
+       
         :append-icon="report.action !== 'leaderboard' ? '' : 'expand_more'"
         active-class="primary rounded-lg"
         color="white"
-        class="mx-4 py-0"
+        class="py-0"
        
       >
    
 
         <template v-slot:activator>
- 
+ <v-icon slot="prependIcon" class="mr-4">{{report.action}}</v-icon>
           <v-list-item-content link @click="$router.push({ path: report.route }) ">
 
             <v-list-item-tile v-text="report.title" ></v-list-item-tile>
@@ -71,17 +71,18 @@
         v-for="setting in settings"
         :key="setting.title"
         v-model="setting.active"
-        :prepend-icon="setting.action"
         :append-icon="setting.action !== 'leaderboard' ? '' : 'expand_more'"
         active-class="primary rounded-lg"
         color="white"
-        class="mx-4 py-0"
+        class="py-0"
       >
    
 
         <template v-slot:activator>
+ <v-icon slot="prependIcon" class="mr-4">{{setting.action}}</v-icon>
  
           <v-list-item-content link @click="$router.push({ path: setting.route })">
+            
             <v-list-item-title v-text="setting.title"></v-list-item-title>
           </v-list-item-content>
           
@@ -180,4 +181,10 @@ export default {
 .border {
   border-radius: 5%;
 }
+
+.container, .v-navigation-drawer {
+  background-color: #F8F8F8
+}
+
+
 </style>
