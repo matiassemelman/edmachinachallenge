@@ -14,6 +14,7 @@
           flat
         >
         <v-card class="d-flex grey lighten-5 justify-space-between " style="width:237px" elevation="0">
+    <v-toolbar-title class="primary--text headline font-weight-medium" >My Report</v-toolbar-title>
           <v-icon small>content_copy</v-icon>
           <v-icon small>share</v-icon>
           <v-spacer></v-spacer>
