@@ -15,10 +15,25 @@
         >
         <v-card class="d-flex grey lighten-5 justify-space-between " style="width:237px" elevation="0">
     <v-toolbar-title class="primary--text headline font-weight-medium" >My Report</v-toolbar-title>
-          <v-icon small>content_copy</v-icon>
-          <v-icon small>share</v-icon>
+          <button icon>
+            <v-icon small>content_copy</v-icon>
+          </button>
+          <button icon>
+            <v-icon small>share</v-icon>
+          </button>
+        </v-card>
+    
+          
           <v-spacer></v-spacer>
-        <h1>Hello</h1>
+          <v-icon>highlight_off</v-icon>
+          <v-icon>highlight_off</v-icon>
+
+          <v-icon>highlight_off</v-icon>
+          <v-icon>highlight_off</v-icon>
+
+
+          <v-icon>filter_alt</v-icon>
+   
         </v-toolbar>
       </template>
      
@@ -29,8 +44,4 @@
 
 <style scoped lang="scss">
 
-
-.theme--light.v-toolbar.v-sheet {
-  background-color: #F8F8F8
-}
 </style>
