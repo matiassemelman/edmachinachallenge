@@ -3,9 +3,18 @@
     <TopBar />
 
     <v-main>
-      <v-container fluid class="d-flex ml-0 pt-0">
+      <v-container fluid class="d-flex ma-0 pa-0">
         <NavBar />
-        <router-view></router-view>
+        <v-container class="ma-0 pa-0">
+          <router-view></router-view>
+          <template>
+            <v-footer padless class="indigo lighten-1 white--text mt-16">
+              <v-col class="text-left" cols="12">
+                COPYRIGHT © 2022 EdMachina
+              </v-col>
+            </v-footer>
+          </template>
+        </v-container>
       </v-container>
     </v-main>
   </v-app>
