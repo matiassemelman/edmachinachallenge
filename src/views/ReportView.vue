@@ -1,7 +1,8 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="pa-0 px-4">
     <v-container
-      class="mb-2 d-flex justify-space-between grey lighten-5"
+      fluid
+      class="d-flex justify-space-between grey lighten-5"
       flat
       width="1065"
     >
@@ -47,7 +48,14 @@
 
     <v-row no-gutters>
       <v-col v-for="n in 4" :key="n" cols="12" sm="3">
-        <v-card class="ml-1 mr-1" height="164" outlined tile>
+        <v-card class="ml-3 mr-3" height="164" outlined tile>
+          <v-spacer></v-spacer>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row no-gutters class="mt-5">
+      <v-col v-for="n in 3" :key="n" cols="12" sm="4">
+        <v-card class="ml-3 mr-3" height="357" outlined tile>
           <v-spacer></v-spacer>
         </v-card>
       </v-col>
