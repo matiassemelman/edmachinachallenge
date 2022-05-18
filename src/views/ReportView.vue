@@ -7,7 +7,7 @@
       hide-default-footer
     >
       <template v-slot:header>
-        <v-toolbar class="mb-2 d-flex grey lighten-5" width="70vw" flat>
+        <v-toolbar class="mb-2 d-flex grey lighten-5"  flat>
           <v-card
             class="d-flex grey lighten-5 justify-space-between align-center"
             style="width: 237px; marginRight: 300px"
@@ -17,48 +17,30 @@
             <v-toolbar-title class="primary--text headline font-weight-medium"
               >My Report</v-toolbar-title
             >
-            <v-btn icon>
-              <v-icon small class="v-btn-size">content_copy</v-icon>
-            </v-btn>
-            <v-btn icon>
-              <v-icon small class="v-btn-size">share</v-icon>
-            </v-btn>
+              <v-icon small class="v-btn-size" style="fontSize:21px;">content_copy</v-icon>
+              <v-icon small class="v-btn-size" style="fontSize:21px;">share</v-icon>
           </v-card>
 
           <v-spacer></v-spacer>
           <v-card   class="d-flex grey lighten-5 justify-space-between align-center" 
           elevation="0">
-<v-btn icon>
-            <v-icon color="#AA3EFF">highlight_off</v-icon>
-          </v-btn>
+            <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
 
           <span class="span-filter mr-5 flex-shrink-0" > A 01 - 2022</span>
-          <v-btn icon>
-            <v-icon color="#AA3EFF">highlight_off</v-icon>
-          </v-btn>
+            <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
 
           <span class="span-filter mr-5">Age</span>
-          <v-btn icon>
-            <v-icon color="#AA3EFF">highlight_off</v-icon>
-          </v-btn>
+            <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
 
           <span class="span-filter mr-5">Career</span>
-          <v-btn icon>
-            <v-icon color="#AA3EFF">highlight_off</v-icon>
-          </v-btn>
+            <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
 
           <span class="span-filter mr-5">All</span>
 
-          <v-btn color="primary" x-small height="42px">
-            <v-icon color="white" depressed>filter_alt</v-icon>
-          </v-btn>
+            <v-icon depressed class="mr-4">filter_alt</v-icon>
 
-          <v-btn icon>
             <v-icon>dashboard</v-icon>
-          </v-btn>
-          <v-btn icon>
             <v-icon>app_registration</v-icon>
-          </v-btn>
           </v-card>
           
         </v-toolbar>
@@ -70,6 +52,7 @@
 <style scoped lang="scss">
 .v-btn--icon.v-size--default .v-icon, .v-icon.v-icon, .v-btn-size {
   height: 21px;
+
 }
 
 .span-filter {
