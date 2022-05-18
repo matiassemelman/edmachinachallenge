@@ -1,60 +1,57 @@
 <template>
   <v-container fluid>
-    <v-data-iterator
-      :items="desserts"
-      item-key="name"
-      :items-per-page="4"
-      hide-default-footer
+    <v-container
+      class="mb-2 d-flex justify-space-between grey lighten-5"
+      flat
+      width="1065"
     >
-      <template v-slot:header>
-        <v-container
-          class="mb-2 d-flex justify-space-between grey lighten-5"
-          flat
-          width="1065"
+      <v-card
+        class="d-flex grey lighten-5 justify-space-between align-center"
+        width="237px"
+        elevation="0"
+      >
+        <v-toolbar-title class="primary--text headline font-weight-medium"
+          >My Report</v-toolbar-title
         >
-          <v-card
-            class="d-flex grey lighten-5 justify-space-between align-center"
-            width="237px"
-            elevation="0"
-          >
-            <v-toolbar-title class="primary--text headline font-weight-medium"
-              >My Report</v-toolbar-title
-            >
-            <v-icon small class="v-btn-size" style="fontsize: 21px"
-              >content_copy</v-icon
-            >
-            <v-icon small class="v-btn-size" style="fontsize: 21px"
-              >share</v-icon
-            >
-          </v-card>
+        <v-icon small class="v-btn-size" style="fontsize: 21px"
+          >content_copy</v-icon
+        >
+        <v-icon small class="v-btn-size" style="fontsize: 21px">share</v-icon>
+      </v-card>
 
+      <v-spacer></v-spacer>
+      <v-card
+        class="d-flex grey lighten-5 justify-space-between align-center"
+        elevation="0"
+      >
+        <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
+
+        <span class="span-filter mr-5 flex-shrink-0"> A 01 - 2022</span>
+        <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
+
+        <span class="span-filter mr-5">Age</span>
+        <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
+
+        <span class="span-filter mr-5">Career</span>
+        <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
+
+        <span class="span-filter mr-5">All</span>
+        <v-card class="d-flex justify-center primary pa-4 mr-4">
+          <v-icon color="white">filter_alt</v-icon>
+        </v-card>
+
+        <v-icon class="mr-4">dashboard</v-icon>
+        <v-icon>app_registration</v-icon>
+      </v-card>
+    </v-container>
+
+    <v-row no-gutters>
+      <v-col v-for="n in 4" :key="n" cols="12" sm="3">
+        <v-card class="ml-1 mr-1" height="164" outlined tile>
           <v-spacer></v-spacer>
-          <v-card
-            class="d-flex grey lighten-5 justify-space-between align-center"
-            elevation="0"
-          >
-            <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
-
-            <span class="span-filter mr-5 flex-shrink-0"> A 01 - 2022</span>
-            <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
-
-            <span class="span-filter mr-5">Age</span>
-            <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
-
-            <span class="span-filter mr-5">Career</span>
-            <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
-
-            <span class="span-filter mr-5">All</span>
-            <v-card class="d-flex justify-center primary pa-4">
-              <v-icon color="white">filter_alt</v-icon>
-            </v-card>
-
-            <v-icon>dashboard</v-icon>
-            <v-icon>app_registration</v-icon>
-          </v-card>
-        </v-container>
-      </template>
-    </v-data-iterator>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
