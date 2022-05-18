@@ -1,13 +1,12 @@
 <template>
   <v-app id="app">
     <TopBar />
-    
+
     <v-main>
-      <v-container fluid class="d-flex ml-0">
- <NavBar />
-      <router-view></router-view>
+      <v-container fluid class="d-flex ml-0 pt-0">
+        <NavBar />
+        <router-view></router-view>
       </v-container>
-     
     </v-main>
   </v-app>
 </template>
@@ -29,10 +28,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.container, .v-navigation-drawer {
-  background-color: #F8F8F8
+.container,
+.v-navigation-drawer {
+  background-color: #f8f8f8;
 }
-
-
-
 </style>
