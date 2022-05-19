@@ -113,4 +113,8 @@ export default {
   font-size: 14px;
   font-weight: 600;
 }
+
+.v-list-item--dense .v-list-item__title {
+  font-size: 14px;
+}
 </style>
