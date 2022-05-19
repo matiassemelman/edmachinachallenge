@@ -5,9 +5,9 @@
     <v-main>
       <v-container fluid class="d-flex ma-0 pa-0">
         <NavBar />
-        <v-container class="ma-0 pa-0">
+        <v-container class="ma-0 pa-0 d-flex flex-column justify-space-between">
           <router-view></router-view>
-          <v-footer inset padless class="indigo lighten-1 white--text mt-16">
+          <v-footer inset padless class="indigo lighten-1 white--text">
             <v-col class="text-left" cols="12">
               COPYRIGHT © 2022 EdMachina
             </v-col>

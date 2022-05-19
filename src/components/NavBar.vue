@@ -17,7 +17,7 @@
         </v-list-item>
       </v-list-item-group>
     </v-list>
-    <v-list>
+    <v-list class="d-flex">
       <v-subheader>REPORTS</v-subheader>
       <v-list-item-title></v-list-item-title>
 
@@ -166,7 +166,7 @@ export default {
 
 <style scoped lang="scss">
 .listItemHeight {
-  height: 500px;
+  height: 600px;
 }
 
 .border {
