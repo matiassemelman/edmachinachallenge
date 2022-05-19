@@ -7,13 +7,16 @@
         <NavBar />
         <v-container class="ma-0 pa-0">
           <router-view></router-view>
-          <template>
-            <v-footer padless class="indigo lighten-1 white--text mt-16">
-              <v-col class="text-left" cols="12">
-                COPYRIGHT © 2022 EdMachina
-              </v-col>
-            </v-footer>
-          </template>
+          <v-footer
+            absolute
+            inset
+            padless
+            class="indigo lighten-1 white--text mt-16"
+          >
+            <v-col class="text-left" cols="12">
+              COPYRIGHT © 2022 EdMachina
+            </v-col>
+          </v-footer>
         </v-container>
       </v-container>
     </v-main>
