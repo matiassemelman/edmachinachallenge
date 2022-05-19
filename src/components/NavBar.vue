@@ -17,7 +17,7 @@
         </v-list-item>
       </v-list-item-group>
     </v-list>
-    <v-list class="d-flex">
+    <v-list>
       <v-subheader>REPORTS</v-subheader>
       <v-list-item-title></v-list-item-title>
 

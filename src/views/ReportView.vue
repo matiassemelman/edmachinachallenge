@@ -76,7 +76,7 @@
     <v-toolbar-title class="primary--text headline font-weight-medium mt-7 ml-3"
       >New Group</v-toolbar-title
     >
-    <v-row no-gutters>
+    <v-row no-gutters class="mb-16">
       <v-col v-for="n in 2" :key="n" :cols="n === 1 ? 4 : 8">
         <v-card class="ma-2" tile outlined height="357"> </v-card>
       </v-col>

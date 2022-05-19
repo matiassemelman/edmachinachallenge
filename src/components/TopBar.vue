@@ -63,9 +63,36 @@
               </div>
 
               <div>
-                <v-btn icon class="mt-3 ml-16">
-                  <v-icon>navigate_next</v-icon>
-                </v-btn>
+                <v-menu top :offset-x="offset">
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                      color="rgba(0, 0, 0, 0.54)"
+                      text
+                      v-bind="attrs"
+                      v-on="on"
+                      class="ml-16 mt-4"
+                    >
+                      <v-icon>navigate_next</v-icon>
+                    </v-btn>
+                  </template>
+
+                  <v-list class="pb-0">
+                    <v-toolbar color="#EBE9F1" class="mt-0">
+                      <v-toolbar-title class="primary--text"
+                        >All Accounts</v-toolbar-title
+                      >
+                    </v-toolbar>
+                    <v-list-item
+                      v-for="(account, index) in accounts"
+                      :key="index"
+                    >
+                      <v-list-item-title
+                        ><strong>{{ account.title }}</strong
+                        >: {{ account.number }}</v-list-item-title
+                      >
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
               </div>
             </div>
           </v-list-item-title>
@@ -97,12 +124,27 @@
   </v-app-bar>
 </template>
 
+<style scoped lang="scss">
+.v-toolbar__title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.account_toolbar {
+  height: 49px;
+}
+</style>
+
 <script>
 export default {
   name: "TopBar",
 
   data: () => ({
     notifications: 4,
+    accounts: [
+      { title: "Teclab", number: "12835464" },
+      { title: "IPP", number: "123456789" },
+    ],
   }),
 };
 </script>
