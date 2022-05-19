@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app color="primary" dark flat>
+  <v-app-bar color="primary" dark flat>
     <v-btn icon>
       <v-icon size="21">mdi-menu</v-icon>
     </v-btn>
@@ -102,7 +102,7 @@ export default {
   name: "TopBar",
 
   data: () => ({
-    notifications: 4
+    notifications: 4,
   }),
 };
 </script>
