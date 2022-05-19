@@ -48,9 +48,9 @@
               <v-icon>app_registration</v-icon>
             </v-btn>
           </template>
-          <v-list v-for="(action, index) in actions" :key="index">
+          <v-list width="208" v-for="(action, index) in actions" :key="index">
             <v-divider v-if="action.icon === 'addchart'"></v-divider>
-            <v-list-item>
+            <v-list-item dense>
               <v-icon class="mr-2">{{ action.icon }}</v-icon>
               <v-list-item-title>{{ action.title }}</v-list-item-title>
             </v-list-item>
