@@ -48,8 +48,10 @@
               <v-icon>app_registration</v-icon>
             </v-btn>
           </template>
-          <v-list>
-            <v-list-item v-for="(action, index) in actions" :key="index">
+          <v-list v-for="(action, index) in actions" :key="index">
+            <v-divider v-if="action.icon === 'addchart'"></v-divider>
+            <v-list-item>
+              <v-icon class="mr-2">{{ action.icon }}</v-icon>
               <v-list-item-title>{{ action.title }}</v-list-item-title>
             </v-list-item>
           </v-list>
@@ -86,10 +88,14 @@
 export default {
   data: () => ({
     actions: [
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me 2" },
+      { title: "Export Report", icon: "download " },
+      { title: "Share Report", icon: "share" },
+      { title: "Report Settings", icon: "tune" },
+      { title: "Schedule Report", icon: "schedule" },
+      { title: "Edit Report", icon: "dashboard" },
+      { title: "Pin Report", icon: "push_pin" },
+      { title: "New Report", icon: "addchart" },
+      { title: "My Reports", icon: "description" },
     ],
   }),
 };
