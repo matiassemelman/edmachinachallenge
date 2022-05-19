@@ -41,8 +41,19 @@
           <v-icon color="white">filter_alt</v-icon>
         </v-card>
 
-        <v-icon class="mr-4">dashboard</v-icon>
-        <v-icon>app_registration</v-icon>
+        <v-icon>dashboard</v-icon>
+        <v-menu offset-y>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn color="rgba(0, 0, 0, 0.54)" text v-bind="attrs" v-on="on">
+              <v-icon>app_registration</v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item v-for="(action, index) in actions" :key="index">
+              <v-list-item-title>{{ action.title }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </v-card>
     </v-container>
 
@@ -70,6 +81,19 @@
     </v-row>
   </v-container>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    actions: [
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me" },
+      { title: "Click Me 2" },
+    ],
+  }),
+};
+</script>
 
 <style scoped lang="scss">
 .v-btn--icon.v-size--default .v-icon,
