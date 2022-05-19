@@ -1,5 +1,10 @@
 <template>
-  <v-navigation-drawer permanent width="260" class="flex-shrink-0">
+  <v-navigation-drawer
+    floating
+    permanent
+    width="260"
+    class="flex-shrink-0 white"
+  >
     <v-list rounded class="px-0">
       <v-list-item-group v-model="selectedItem" color="primary" class="py-0">
         <v-list-item v-for="(item, i) in items" :key="i">
