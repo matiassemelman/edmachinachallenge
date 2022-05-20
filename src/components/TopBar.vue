@@ -1,7 +1,7 @@
 <template>
   <v-app-bar flat color="primary" class="px-2">
    
-      <v-icon size="24" color="secondary" class="">mdi-menu</v-icon>
+      <v-icon size="24" color="secondary" class="topbarFont--text">mdi-menu</v-icon>
     
     
       <v-img src="../assets/logo.png" max-height="22"
@@ -10,22 +10,22 @@
 
     <v-spacer></v-spacer>
    
-      <v-icon color="secondary">mdi-magnify</v-icon>
+      <v-icon color="secondary"  class="topbarFont--text">mdi-magnify</v-icon>
     
     <v-btn @click="toggleTheme" text rounded>
-      <v-icon color="secondary">{{this.$vuetify.theme.dark === false ? 'dark_mode' : 'light_mode'}}</v-icon>
+      <v-icon color="secondary"  class="topbarFont--text">{{this.$vuetify.theme.dark === false ? 'dark_mode' : 'light_mode'}}</v-icon>
     </v-btn>
    
-      <v-icon color="secondary">settings</v-icon>
+      <v-icon color="secondary"  class="topbarFont--text">settings</v-icon>
     
    
       <v-badge color="red" content="4" overlap class="pl-4">
-        <v-icon color="secondary " >notifications</v-icon>
+        <v-icon color="secondary "  class="topbarFont--text" >notifications</v-icon>
       </v-badge>
    
     <div class="pr-3 pl-5" >
-      <p class="mb-0 secondary--text">John Doe</p>
-      <p class="mb-0 secondary--text text-right small-size">Admin</p>
+      <p class="mb-0 topbarFont--text">John Doe</p>
+      <p class="mb-0 topbarFont--text text-right small-size">Admin</p>
     </div>
     <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
