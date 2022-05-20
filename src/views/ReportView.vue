@@ -2,16 +2,16 @@
   <v-container fluid class="pa-0 px-4">
     <v-container
       fluid
-      class="d-flex justify-space-between grey lighten-5"
+      class="d-flex justify-space-between "
       flat
       width="1065"
     >
       <v-card
-        class="d-flex grey lighten-5 justify-space-between align-center"
+        class="d-flex  justify-space-between align-center"
         width="237px"
         elevation="0"
       >
-        <v-toolbar-title class="primary--text headline font-weight-medium"
+        <v-toolbar-title class=" headline font-weight-medium"
           >My Report</v-toolbar-title
         >
         <v-icon small class="v-btn-size" style="fontsize: 21px"
@@ -22,29 +22,29 @@
 
       <v-spacer></v-spacer>
       <v-card
-        class="d-flex grey lighten-5 justify-space-between align-center"
+        class="d-flex  justify-space-between align-center"
         elevation="0"
       >
-        <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
+        <v-icon  class="mr-2">highlight_off</v-icon>
 
         <span class="span-filter mr-5 flex-shrink-0"> A 01 - 2022</span>
-        <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
+        <v-icon  class="mr-2">highlight_off</v-icon>
 
         <span class="span-filter mr-5">Age</span>
-        <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
+        <v-icon  class="mr-2">highlight_off</v-icon>
 
         <span class="span-filter mr-5">Career</span>
-        <v-icon color="#AA3EFF" class="mr-2">highlight_off</v-icon>
+        <v-icon  class="mr-2">highlight_off</v-icon>
 
         <span class="span-filter mr-5">All</span>
-        <v-card class="d-flex justify-center primary pa-4 mr-4">
-          <v-icon color="white">filter_alt</v-icon>
+        <v-card class="d-flex justify-center  pa-4 mr-4">
+          <v-icon >filter_alt</v-icon>
         </v-card>
 
         <v-icon>dashboard</v-icon>
         <v-menu offset-y>
           <template v-slot:activator="{ on, attrs }">
-            <v-btn color="rgba(0, 0, 0, 0.54)" text v-bind="attrs" v-on="on">
+            <v-btn  text v-bind="attrs" v-on="on">
               <v-icon>app_registration</v-icon>
             </v-btn>
           </template>
@@ -73,7 +73,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-toolbar-title class="primary--text headline font-weight-medium mt-7 ml-3"
+    <v-toolbar-title class=" headline font-weight-medium mt-7 ml-3"
       >New Group</v-toolbar-title
     >
     <v-row no-gutters class="mb-16">
@@ -109,7 +109,7 @@ export default {
 }
 
 .span-filter {
-  color: #aa3eff;
+
   font-size: 14px;
   font-weight: 600;
 }

@@ -7,7 +7,7 @@
         <NavBar />
         <v-container class="ma-0 pa-0 d-flex flex-column justify-space-between">
           <router-view></router-view>
-          <v-footer inset padless class="indigo lighten-1 white--text">
+          <v-footer inset padless >
             <v-col class="text-left" cols="12">
               COPYRIGHT © 2022 EdMachina
             </v-col>
@@ -34,9 +34,3 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-.container,
-.v-navigation-drawer {
-  background-color: #f8f8f8;
-}
-</style>

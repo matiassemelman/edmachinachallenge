@@ -3,10 +3,10 @@
     floating
     permanent
     width="260"
-    class="flex-shrink-0 white"
+    class="flex-shrink-0"
   >
     <v-list rounded class="px-0">
-      <v-list-item-group v-model="selectedItem" color="primary" class="py-0">
+      <v-list-item-group v-model="selectedItem" class="py-0">
         <v-list-item v-for="(item, i) in items" :key="i">
           <v-list-item-icon class="mr-4">
             <v-icon v-text="item.action"></v-icon>
@@ -29,8 +29,8 @@
         :key="report.title"
         v-model="report.active"
         :append-icon="report.action !== 'leaderboard' ? '' : 'expand_more'"
-        active-class="primary rounded-lg"
-        color="white"
+        active-class="rounded-lg"
+        
         class="py-0"
       >
         <template v-slot:activator>
@@ -63,8 +63,8 @@
         :key="setting.title"
         v-model="setting.active"
         :append-icon="setting.action !== 'leaderboard' ? '' : 'expand_more'"
-        active-class="primary rounded-lg"
-        color="white"
+        active-class=" rounded-lg"
+        
         class="py-0"
       >
         <template v-slot:activator>
@@ -173,8 +173,5 @@ export default {
   border-radius: 5%;
 }
 
-.container,
-.v-navigation-drawer {
-  background-color: #f8f8f8;
-}
+
 </style>

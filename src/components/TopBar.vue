@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="primary" dark flat>
+  <v-app-bar flat>
     <v-btn icon>
       <v-icon size="21">mdi-menu</v-icon>
     </v-btn>
@@ -58,7 +58,7 @@
           <v-list-item-title>
             <div class="d-flex">
               <div>
-                <p class="primary--text font-weight-bold mt-3 mb-1">Teclab</p>
+                <p class=" font-weight-bold mt-3 mb-1">Teclab</p>
                 <p class="mt-1">12829347</p>
               </div>
 
@@ -66,7 +66,7 @@
                 <v-menu top :offset-x="offset">
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn
-                      color="rgba(0, 0, 0, 0.54)"
+                    
                       text
                       v-bind="attrs"
                       v-on="on"
@@ -77,8 +77,8 @@
                   </template>
 
                   <v-list class="pb-0">
-                    <v-toolbar color="#EBE9F1" class="mt-0">
-                      <v-toolbar-title class="primary--text"
+                    <v-toolbar  class="mt-0">
+                      <v-toolbar-title 
                         >All Accounts</v-toolbar-title
                       >
                     </v-toolbar>

@@ -6,10 +6,7 @@ html,
   font-family: "Montserrat", sans-serif;
 }
 
-.active {
-  background-color: primary;
-  
-}
+
 
 .v-subheader {
   height: 18px;
@@ -17,6 +14,3 @@ html,
   
 }
 
-.theme--light.v-subheader {
-  color: #BABFC7
-}
