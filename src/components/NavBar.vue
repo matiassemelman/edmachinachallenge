@@ -12,14 +12,14 @@
             <v-icon v-text="item.action"></v-icon>
           </v-list-item-icon>
           <v-list-item-content link @click="$router.push({ path: item.route })">
-            <v-list-item-title v-text="item.title"></v-list-item-title>
+            <v-list-item-title v-text="item.title" class="navbarTitle--text"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list-item-group>
     </v-list>
     <v-list class="d-flex">
-      <v-subheader>REPORTS</v-subheader>
-      <v-list-item-title></v-list-item-title>
+      <v-subheader class="navbarSubtitle--text">REPORTS</v-subheader>
+      <v-list-item-title class="navbarTitle--text"></v-list-item-title>
 
       <v-icon right small class="mr-4">list_alt</v-icon>
     </v-list>
@@ -29,17 +29,17 @@
         :key="report.title"
         v-model="report.active"
         :append-icon="report.action !== 'leaderboard' ? '' : 'expand_more'"
-        active-class="rounded-lg"
+        active-class="navbarActiveTile rounded-lg navbarActiveText--text"
         
         class="py-0"
       >
         <template v-slot:activator>
-          <v-icon slot="prependIcon" class="mr-4">{{ report.action }}</v-icon>
-          <v-list-item-content
+          <v-icon slot="prependIcon" class="mr-4 ">{{ report.action }}</v-icon>
+          <v-list-item-content 
             link
             @click="$router.push({ path: report.route })"
           >
-            <v-list-item-tile v-text="report.title"></v-list-item-tile>
+            <v-list-item-tile v-text="report.title"  ></v-list-item-tile>
           </v-list-item-content>
         </template>
 
@@ -49,13 +49,13 @@
           class="listItemHeight"
         >
           <v-list-item-content>
-            <v-list-item-title v-text="child.title"></v-list-item-title>
+            <v-list-item-title v-text="child.title" class="navbarTitle--text"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
     </v-list>
 
-    <v-subheader>SETTINGS</v-subheader>
+    <v-subheader class="navbarSubtitle--text">SETTINGS</v-subheader>
 
     <v-list>
       <v-list-group
@@ -63,8 +63,8 @@
         :key="setting.title"
         v-model="setting.active"
         :append-icon="setting.action !== 'leaderboard' ? '' : 'expand_more'"
-        active-class=" rounded-lg"
-        
+        active-class="secondary rounded-lg"
+        color="secondary"
         class="py-0"
       >
         <template v-slot:activator>
@@ -74,7 +74,7 @@
             link
             @click="$router.push({ path: setting.route })"
           >
-            <v-list-item-title v-text="setting.title"></v-list-item-title>
+            <v-list-item-title v-text="setting.title" class="navbarTitle--text"></v-list-item-title>
           </v-list-item-content>
         </template>
       </v-list-group>
@@ -167,6 +167,10 @@ export default {
 <style scoped lang="scss">
 .listItemHeight {
   height: 600px;
+}
+
+.navbarTitle--text {
+  font-weight: 500;
 }
 
 .border {
