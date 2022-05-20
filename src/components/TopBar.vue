@@ -1,30 +1,30 @@
 <template>
-  <v-app-bar flat>
-    <v-btn icon>
-      <v-icon size="21">mdi-menu</v-icon>
-    </v-btn>
+  <v-app-bar flat color="primary">
+   
+      <v-icon size="24" color="secondary">mdi-menu</v-icon>
+    
     <div>
       <v-img contain src="../assets/logo.png" width="146"></v-img>
     </div>
 
     <v-spacer></v-spacer>
     <v-btn icon>
-      <v-icon>mdi-magnify</v-icon>
+      <v-icon color="secondary">mdi-magnify</v-icon>
     </v-btn>
-    <v-btn icon>
-      <v-icon>dark_mode</v-icon>
+    <v-btn @click="toggleTheme" text rounded>
+      <v-icon color="secondary">{{this.$vuetify.theme.dark === false ? 'dark_mode' : 'light_mode'}}</v-icon>
     </v-btn>
-    <v-btn icon>
-      <v-icon>settings</v-icon>
+    <v-btn icon >
+      <v-icon color="secondary">settings</v-icon>
     </v-btn>
     <v-btn icon>
       <v-badge color="red" content="4" overlap>
-        <v-icon>notifications</v-icon>
+        <v-icon color="secondary">notifications</v-icon>
       </v-badge>
     </v-btn>
-    <div class="ml-2">
-      <p class="mb-0">John Doe</p>
-      <p class="mb-0">Admin</p>
+    <div class="ml-2" >
+      <p class="mb-0 secondary--text">John Doe</p>
+      <p class="mb-0 secondary--text">Admin</p>
     </div>
     <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
@@ -125,6 +125,12 @@
 </template>
 
 <style scoped lang="scss">
+
+.v-icon.v-icon {
+  height: 21px;
+}
+
+
 .v-toolbar__title {
   font-size: 16px;
   font-weight: 600;
@@ -145,6 +151,12 @@ export default {
       { title: "Teclab", number: "12835464" },
       { title: "IPP", number: "123456789" },
     ],
-  }),
+   
+  } ),
+  methods: {
+      toggleTheme() {
+        this.$vuetify.theme.dark = ! this.$vuetify.theme.dark
+      } 
+    }
 };
 </script>
