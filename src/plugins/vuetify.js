@@ -8,14 +8,18 @@ export default new Vuetify({
     icons: {
 iconfont: 'md'
     },
-    theme:  { dark: true }
-    // {
-    //     themes: {
-    //         light: {
-    //             primary: "#4436FD",
-    //             secondary: "#6E6B7B",
-    //             terciary: "#AA3EFF"
-    //         }
-    //     }
-    // }
+    theme:  
+    {
+        themes: {
+            light: {
+                primary: "#4436FD",
+                secondary: '#FFFFFF'
+             
+            },
+            dark: {
+                primary: "#000000",
+                secondary: '#FFFFFF'
+            }
+        }
+    }
 });
