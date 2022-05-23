@@ -1,18 +1,20 @@
 <template>
-  <v-navigation-drawer
-    floating
-    permanent
-    width="260"
-    class="flex-shrink-0"
-  >
-    <v-list rounded class="px-0">
-      <v-list-item-group v-model="selectedItem" class="py-0">
-        <v-list-item v-for="(item, i) in items" :key="i">
-          <v-list-item-icon class="mr-4">
+  <v-navigation-drawer floating permanent width="260" class="flex-shrink-0">
+    <v-list>
+      <v-list-item-group v-model="selectedItem" class="pa-0 mx-4">
+        <v-list-item
+          class="py-0 mb-2 navbarTile"
+          v-for="(item, i) in items"
+          :key="i"
+        >
+          <v-list-item-icon class="mr-4 my-2">
             <v-icon v-text="item.action"></v-icon>
           </v-list-item-icon>
           <v-list-item-content link @click="$router.push({ path: item.route })">
-            <v-list-item-title v-text="item.title" class="navbarTitle--text"></v-list-item-title>
+            <v-list-item-title
+              v-text="item.title"
+              class="navbarTitle--text"
+            ></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list-item-group>
@@ -28,18 +30,17 @@
         v-for="report in reports"
         :key="report.title"
         v-model="report.active"
-        :append-icon="report.action !== 'leaderboard' ? '' : 'expand_more'"
+        :append-icon="report.action !== 'leaderboard' ? '' : 'navigate_next'"
         active-class="navbarActiveTile rounded-lg navbarActiveText--text"
-        
-        class="py-0"
+        class="pa-0 mx-4 my-2 navbarTile"
       >
         <template v-slot:activator>
-          <v-icon slot="prependIcon" class="mr-4 ">{{ report.action }}</v-icon>
-          <v-list-item-content 
+          <v-icon slot="prependIcon" class="mr-4">{{ report.action }}</v-icon>
+          <v-list-item-content
             link
             @click="$router.push({ path: report.route })"
           >
-            <v-list-item-tile v-text="report.title"  ></v-list-item-tile>
+            <v-list-item-tile v-text="report.title"></v-list-item-tile>
           </v-list-item-content>
         </template>
 
@@ -49,7 +50,10 @@
           class="listItemHeight"
         >
           <v-list-item-content>
-            <v-list-item-title v-text="child.title" class="navbarTitle--text"></v-list-item-title>
+            <v-list-item-title
+              v-text="child.title"
+              class="navbarTitle--text"
+            ></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
@@ -65,7 +69,7 @@
         :append-icon="setting.action !== 'leaderboard' ? '' : 'expand_more'"
         active-class="secondary rounded-lg"
         color="secondary"
-        class="py-0"
+        class="pa-0 mx-4 my-2 navbarTile"
       >
         <template v-slot:activator>
           <v-icon slot="prependIcon" class="mr-4">{{ setting.action }}</v-icon>
@@ -74,7 +78,10 @@
             link
             @click="$router.push({ path: setting.route })"
           >
-            <v-list-item-title v-text="setting.title" class="navbarTitle--text"></v-list-item-title>
+            <v-list-item-title
+              v-text="setting.title"
+              class="navbarTitle--text"
+            ></v-list-item-title>
           </v-list-item-content>
         </template>
       </v-list-group>
@@ -165,8 +172,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+.theme--dark.v-navigation-drawer {
+background-color: #283046;
+}
+
 .listItemHeight {
   height: 600px;
+}
+
+.navbarTile {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
 }
 
 .navbarTitle--text {

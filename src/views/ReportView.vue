@@ -7,11 +7,12 @@
       width="1065"
     >
       <v-card
-        class="d-flex  justify-space-between align-center"
+        class="d-flex justify-space-between align-center reportBg"
         width="237px"
         elevation="0"
+   
       >
-        <v-toolbar-title class=" headline font-weight-medium"
+        <v-toolbar-title class=" headline font-weight-medium reportTitle--text"
           >My Report</v-toolbar-title
         >
         <v-icon small class="v-btn-size" style="fontsize: 21px"
@@ -22,29 +23,29 @@
 
       <v-spacer></v-spacer>
       <v-card
-        class="d-flex  justify-space-between align-center"
+        class="d-flex  justify-space-between align-center reportBg "
         elevation="0"
       >
-        <v-icon  class="mr-2">highlight_off</v-icon>
+        <v-icon  class="mr-2 filters--text">highlight_off</v-icon>
 
-        <span class="span-filter mr-5 flex-shrink-0"> A 01 - 2022</span>
-        <v-icon  class="mr-2">highlight_off</v-icon>
+        <span class="span-filter mr-5 flex-shrink-0 filters--text"> A 01 - 2022</span>
+        <v-icon  class="mr-2 filters--text">highlight_off</v-icon>
 
-        <span class="span-filter mr-5">Age</span>
-        <v-icon  class="mr-2">highlight_off</v-icon>
+        <span class="span-filter mr-5 filters--text">Age</span>
+        <v-icon  class="mr-2 filters--text">highlight_off</v-icon>
 
-        <span class="span-filter mr-5">Career</span>
-        <v-icon  class="mr-2">highlight_off</v-icon>
+        <span class="span-filter mr-5 filters--text">Career</span>
+        <v-icon  class="mr-2 filters--text">highlight_off</v-icon>
 
-        <span class="span-filter mr-5">All</span>
-        <v-card class="d-flex justify-center  pa-4 mr-4">
-          <v-icon >filter_alt</v-icon>
+        <span class="span-filter mr-5 filters--text">All</span>
+        <v-card class="d-flex justify-center  pa-4 mr-4 filterAltBg">
+          <v-icon class="filterAltText--text">filter_alt</v-icon>
         </v-card>
 
         <v-icon>dashboard</v-icon>
         <v-menu offset-y>
           <template v-slot:activator="{ on, attrs }">
-            <v-btn  text v-bind="attrs" v-on="on">
+            <v-btn  icon v-bind="attrs" v-on="on" class="mr-2 ml-4">
               <v-icon>app_registration</v-icon>
             </v-btn>
           </template>
@@ -61,24 +62,24 @@
 
     <v-row no-gutters>
       <v-col v-for="n in 4" :key="n" cols="12" sm="3">
-        <v-card class="ml-3 mr-3" height="164" outlined tile>
+        <v-card class="ml-3 mr-3 secondary" height="164" outlined tile>
           <v-spacer></v-spacer>
         </v-card>
       </v-col>
     </v-row>
     <v-row no-gutters class="mt-5">
       <v-col v-for="n in 3" :key="n" cols="12" sm="4">
-        <v-card class="ml-3 mr-3" height="357" outlined tile>
+        <v-card class="ml-3 mr-3 secondary" height="357" outlined tile>
           <v-spacer></v-spacer>
         </v-card>
       </v-col>
     </v-row>
-    <v-toolbar-title class=" headline font-weight-medium mt-7 ml-3"
+    <v-toolbar-title class=" headline font-weight-medium mt-7 ml-3 reportTitle--text"
       >New Group</v-toolbar-title
     >
     <v-row no-gutters class="mb-16">
       <v-col v-for="n in 2" :key="n" :cols="n === 1 ? 4 : 8">
-        <v-card class="ma-2" tile outlined height="357"> </v-card>
+        <v-card class="ma-2 secondary" tile outlined height="357"> </v-card>
       </v-col>
     </v-row>
   </v-container>
@@ -117,4 +118,7 @@ export default {
 .v-list-item--dense .v-list-item__title {
   font-size: 14px;
 }
+
+
+
 </style>
