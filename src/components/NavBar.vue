@@ -6,11 +6,12 @@
           class="py-0 mb-2 navbarTile"
           v-for="(item, i) in items"
           :key="i"
+          link @click="$router.push({ path: item.route })"
         >
           <v-list-item-icon class="mr-4 my-2">
             <v-icon v-text="item.action"></v-icon>
           </v-list-item-icon>
-          <v-list-item-content link @click="$router.push({ path: item.route })">
+          <v-list-item-content >
             <v-list-item-title
               v-text="item.title"
               class="navbarTitle--text"
@@ -33,12 +34,13 @@
         :append-icon="report.action !== 'leaderboard' ? '' : 'navigate_next'"
         active-class="navbarActiveTile rounded-lg navbarActiveText--text"
         class="pa-0 mx-4 my-2 navbarTile"
+        @click="$router.push({ path: report.route })"
       >
         <template v-slot:activator>
           <v-icon slot="prependIcon" class="mr-4">{{ report.action }}</v-icon>
           <v-list-item-content
             link
-            @click="$router.push({ path: report.route })"
+            
           >
             <v-list-item-tile v-text="report.title"></v-list-item-tile>
           </v-list-item-content>
